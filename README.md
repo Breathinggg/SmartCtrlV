@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Breathinggg/SmartCtrlV/main/icon.png" width="120" alt="SmartCtrlV Icon"/>
+  <img src="https://github.com/Breathinggg/SmartCtrlV/blob/main/icon.ico" width="120" alt="SmartCtrlV Icon"/>
 </p>
 
 <h1 align="center">SmartCtrlV</h1>
@@ -88,4 +88,45 @@ Or you may force a language in the config.
 ## 📄 Configuration File
 
 Automatically generated on first run:
+`smartctrlv_config.json`
+
+Contains:
+
+- Hotkey bindings  
+- Paste menu options  
+- Whitelist for which apps allow the popup menu  
+
+Users may edit the file manually if desired.
+
+---
+
+## 🔧 Build Instructions (for developers)
+
+### Requirements
+- Python 3.10  
+- PyInstaller  
+- PySide6  
+- pywin32  
+- keyboard / mouse  
+
+### Build
+```bash
+pyinstaller smartctrlv_tray.spec
+
+🧪 Roadmap / Planned Features
+
+UI theme customization
+Optional AI-powered paste helpers
+Plugin-based formatting system
+Cloud-sync settings (optional)
+
+❤️ Acknowledgements
+
+SmartCtrlV is inspired by the idea that copy/paste should be smarter.
+Thanks to all open-source libraries that made this possible.
+
+📜 License
+
+MIT License — free for personal and commercial use.
+
 
