@@ -79,12 +79,6 @@ Or you may force a language in the config.
 
 ---
 
-## 🖼️ Screenshots
-
-> *(Add your own screenshots here later — menu, tray UI, config window, etc.)*
-
----
-
 ## 📄 Configuration File
 
 Automatically generated on first run:
@@ -128,6 +122,7 @@ Thanks to all open-source libraries that made this possible.
 ## 📜 License
 
 MIT License — free for personal and commercial use.
+
 
 
 
