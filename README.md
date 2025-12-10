@@ -28,35 +28,36 @@ No installation required — just run **SmartCtrlV.exe**.
 
 ## ✨ Features
 
+
 ## 🌟 1. Enhanced Ctrl+V in File Explorer
 SmartCtrlV intelligently analyzes clipboard text and automatically performs the most appropriate action when you press Ctrl + V inside Windows Explorer.
 
 ### 🔧 ① Create files from clipboard text
 Paste lines like:
-
+```
 todo.txt
 notes.md
 script.py
-
+```
 SmartCtrlV will create:
-
+```
 todo.txt
 notes.md
 script.py
-
+```
 If a file already exists, it automatically creates:
-
+```
 script (1).py
 script (2).py
-
+```
 ---
 
 ### 🔧 ② Write or append text into selected files
 If you select a text file in Explorer (e.g., log.txt) and press Ctrl + V, SmartCtrlV asks:
 
-- Overwrite file
-- Append to file
-- Cancel
+- Overwrite file  
+- Append to file  
+- Cancel  
 
 Example clipboard:
 
@@ -68,27 +69,27 @@ Example clipboard:
 
 ### 🔧 ③ Execute shell-like commands in the folder
 If the clipboard looks like a command:
-
+```
 pip install requests
-
+```
 or:
-
+```
 git init && git add .
-
+```
 SmartCtrlV opens cmd inside the current folder and runs it.
 
 Useful for:
 
-- Running commands copied from StackOverflow
-- Quickly creating projects
-- Executing git/pip/npm commands in-place
+- Running commands copied from StackOverflow  
+- Quickly creating projects  
+- Executing git/pip/npm commands in-place  
 
 ---
 
 ### 🛡️ ④ Safe by design
-- No destructive actions happen without explicit confirmation  
-- Code blocks / AI output / long text will never be misinterpreted as commands  
-- Long or complex content is safely ignored to avoid accidental file spam  
+- No destructive action happens without confirmation  
+- AI output / long text will NOT be misinterpreted as commands  
+- Long text is ignored to avoid accidental file spam  
 
 ---
 
@@ -103,79 +104,78 @@ Pastes text exactly as-is.
 ---
 
 ### ✔ Plain Text Paste — remove formatting
-Useful when copying from web pages, Word, rich text, etc.
-
 Clipboard:
-
+```
 **Hello** _World_ [Link]
-
+```
 → Becomes:
-
+```
 Hello World Link
-
+```
 ---
 
 ### ✔ Markdown Cleanup
-Automatically removes Markdown syntax but keeps readable content.
-
-## Title
-- item
-- item 2
-> quote
-
-→
-
-Title
-item
-item 2
-quote
-
+Input:
+```
+## Title  
+- item  
+- item 2  
+> quote  
+```
+→ Output:
+```
+Title  
+item  
+item 2  
+quote  
+```
 ---
 
 ### ✔ Structured Formatting (JSON / XML / HTML / SQL)
 If you paste:
-
+```
 {"a":1,"b":2,"c":[3,4,5]}
-
+```
 → Becomes formatted pretty JSON.
 
-XML / HTML / SQL are also auto-formatted.
+Also formats XML / HTML / SQL.
 
 ---
 
 ### ✔ Remove Blank Lines
 
 Input:
+```
+Line 1  
 
-(Line 1)
+Line 2  
 
-(Line 2)
-
-(Line 3)
-
+Line 3  
+```
 → Output:
-
-Line 1
-Line 2
-Line 3
-
+```
+Line 1  
+Line 2  
+Line 3  
+```
 ---
 
 ### ✔ Python Dedent
 Fixes indentation for Python code:
-
+```
         def test():
             print("hi")
-
-→
-
+```
+→ Output:
+```
 def test():
     print("hi")
-
+```
 ---
 
 ### ✔ Fully Configurable
 Each menu item can be enabled/disabled in tray settings.
+
 
 ### ⚙️ 3. Customizable Hotkeys
 All major hotkeys are user-configurable through the tray menu:
@@ -251,6 +251,7 @@ Thanks to all open-source libraries that made this possible.
 ## 📜 License
 
 MIT License — free for personal and commercial use.
+
 
 
 
