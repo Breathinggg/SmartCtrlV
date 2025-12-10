@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Breathinggg/SmartCtrlV/blob/main/icon.ico" width="120" alt="SmartCtrlV Icon"/>
+  <img src="https://github.com/Breathinggg/SmartCtrlV/blob/main/icon.png" width="120" alt="SmartCtrlV Icon"/>
 </p>
 
 <h1 align="center">SmartCtrlV</h1>
@@ -122,6 +122,7 @@ Thanks to all open-source libraries that made this possible.
 ## 📜 License
 
 MIT License — free for personal and commercial use.
+
 
 
 
