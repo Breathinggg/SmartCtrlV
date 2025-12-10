@@ -1,186 +1,91 @@
-SmartCtrlV – Enhanced Clipboard & Explorer Paste Tool for Windows
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Breathinggg/SmartCtrlV/main/icon.png" width="120" alt="SmartCtrlV Icon"/>
+</p>
 
-SmartCtrlV is a lightweight and powerful clipboard enhancement tool for Windows.
-It improves the default Ctrl+V behavior in File Explorer and provides a multi-format paste menu for applications such as browsers, editors, IDEs, and terminals.
+<h1 align="center">SmartCtrlV</h1>
+<p align="center">
+  A powerful Windows paste enhancement tool with customizable hotkeys, a multi-format paste menu, and Explorer clipboard automation.
+</p>
 
-SmartCtrlV runs quietly in the system tray (Snipaste-style UI), supports configurable hotkeys, and includes multilingual UI (English / Chinese / Japanese).
+<p align="center">
+  <a href="https://github.com/Breathinggg/SmartCtrlV/releases/tag/v1.0.0">
+    <img src="https://img.shields.io/github/v/release/Breathinggg/SmartCtrlV?style=for-the-badge" />
+  </a>
+  <img src="https://img.shields.io/badge/Platform-Windows-00a8ff?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
+</p>
 
-🔗 Download & Installation
+---
 
-Download the following files from the Release page:
+## 📥 Download
 
-SmartCtrlV.exe
-smartctrlv_config.json
+👉 **Download the latest release:**  
+https://github.com/Breathinggg/SmartCtrlV/releases/tag/v1.0.0  
 
+No installation required — just run **SmartCtrlV.exe**.
 
-Place them in the same folder and double-click SmartCtrlV.exe.
+---
 
-No installation required.
-No admin privileges required.
+## ✨ Features
 
-A tray icon will appear in the Windows taskbar.
+### 🌟 1. Enhanced Ctrl+V in File Explorer
+SmartCtrlV detects clipboard content intelligently and performs smart actions:
 
-🚀 Features Overview
-1️⃣ Enhanced Ctrl+V in File Explorer
+- Create files from clipboard text (one filename per line)
+- Write or append clipboard content to selected text files
+- Detect and execute shell-like commands in the current folder  
+- Fully safe: no destructive behavior without confirmation
 
-When pressing Ctrl+V inside Explorer:
+### 📋 2. Multi-Format Paste Menu (`Ctrl + Alt + V`)
+A quick popup menu near your cursor with multiple paste modes:
 
-Clipboard Content	Explorer Behavior
-File name list	Create multiple empty files (auto-rename on conflicts)
-Text that looks like a command	Open cmd in the current folder and execute it
-General text	Create file(s) or process text intelligently
-When a text file is selected	Prompt: Overwrite / Append / Cancel
+- **Raw Paste** — normal paste  
+- **Plain Text Paste** — remove formatting  
+- **Markdown Cleanup** — clean headings, lists, quotes, fences  
+- **Structured Formatting** — auto-format JSON / XML / HTML / SQL  
+- **Remove Blank Lines**  
+- **Python Dedent** — auto-fix indentation  
 
-Supports newline-safe appending and extension whitelist.
+Menu items are fully configurable.
 
-2️⃣ Multi-Format Paste Menu (Ctrl+Alt+V)
+### ⚙️ 3. Customizable Hotkeys
+All major hotkeys are user-configurable through the tray menu:
 
-Press Ctrl+Alt+V in whitelisted applications to show a small popup menu next to the mouse cursor:
+- Explorer Paste Hotkey (default: `Ctrl + V`)
+- Multi-Format Menu Hotkey (default: `Ctrl + Alt + V`)
 
-Paste as-is
+SmartCtrlV ensures:
+- Hotkeys cannot conflict  
+- Hotkeys can be assigned by pressing the desired key combo directly  
 
-Paste as plain text
+### 🖥️ 4. Tray UI & Settings Panel
+The tray menu allows you to:
 
-Paste with Markdown cleanup
+- Enable/disable each paste mode  
+- Change hotkeys  
+- Reload configuration  
+- Exit or restart SmartCtrlV  
 
-Paste after structured formatting (JSON / XML / HTML / SQL)
+User preferences are stored in `smartctrlv_config.json`.
 
-Paste with blank lines removed
+### 🌏 5. Auto Language Detection
+UI automatically switches between:
 
-Paste with Python indentation normalization
+- English  
+- 简体中文  
+- 日本語  
 
-Each menu option can be enabled or disabled in the configuration.
+Or you may force a language in the config.
 
-3️⃣ System Tray Application (Snipaste-Style)
+---
 
-Right-click the tray icon to access quick actions:
+## 🖼️ Screenshots
 
-Enable / Disable Explorer enhancements
+> *(Add your own screenshots here later — menu, tray UI, config window, etc.)*
 
-Enable / Disable multi-format paste menu
+---
 
-Toggle whitelist
+## 📄 Configuration File
 
-Edit configuration file
+Automatically generated on first run:
 
-Open log folder
-
-Auto-start on boot
-
-Exit
-
-Double-click the tray icon to view an “About / Status” dialog.
-
-⚙ Configuration File (smartctrlv_config.json)
-
-The configuration file is automatically created in the executable directory on first run.
-
-Example:
-
-{
-  "explorer": {
-    "enable_command_from_clipboard": true,
-    "enable_create_files_from_clipboard": true,
-    "enable_write_file_from_clipboard": true,
-    "text_ext_whitelist": [".txt", ".md", ".json", ".py"]
-  },
-  "menu": {
-    "enabled": true,
-    "whitelist_enabled": true,
-    "whitelist_processes": ["chrome.exe", "notepad.exe", "code.exe"],
-    "hotkey": "ctrl+alt+v",
-    "options": {
-      "raw": true,
-      "plain": true,
-      "markdown": true,
-      "structured": true,
-      "collapse_blank": true,
-      "python_dedent": true
-    }
-  },
-  "hotkeys": {
-    "explorer_ctrl_v": "ctrl+v"
-  },
-  "ui": {
-    "language": "auto"
-  }
-}
-
-⌨ Default Hotkeys
-Feature	Hotkey	Configurable
-Explorer enhanced paste	Ctrl+V	✔ Yes
-Multi-format paste menu	Ctrl+Alt+V	✔ Yes
-Emergency exit	Ctrl+Alt+Esc	No
-
-Hotkeys can be modified through the tray UI (press keys directly inside the hotkey field).
-
-🌐 Language Support
-
-English
-
-简体中文
-
-日本語
-
-Language is automatically chosen based on system locale, or can be forced via config.
-
-🛠 Technical Stack
-
-Python 3.10
-
-PySide6 (Qt6)
-
-Tkinter (lightweight popup menu)
-
-keyboard / mouse global hooks
-
-pywin32 / comtypes for Explorer integration
-
-PyInstaller (one-file executable)
-
-❓ FAQ
-Why is the executable 30–40 MB?
-
-Because it bundles:
-
-Python interpreter
-
-Qt6 runtime
-
-Tkinter
-
-win32 dependencies
-
-This is normal for a Python-based GUI tool.
-
-Does it interfere with normal Ctrl+V?
-
-No.
-
-Enhanced Ctrl+V only activates in Explorer
-
-In file rename dialogs / address bar, it falls back to native behavior
-
-In other applications, Ctrl+V remains unchanged
-
-How to exit the program?
-Ctrl + Alt + Esc
-
-
-or right-click the tray icon → Exit.
-
-📜 License
-
-MIT License
-
-✔ Multi-language READMEs
-
-If you want, I can generate:
-
-README.zh-CN.md（简体中文）
-
-README.ja.md（日本語版）
-
-And add language toggle like:
-
-English | [中文](README.zh-CN.md) | [日本語](README.ja.md)
