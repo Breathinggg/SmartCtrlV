@@ -28,25 +28,154 @@ No installation required — just run **SmartCtrlV.exe**.
 
 ## ✨ Features
 
-### 🌟 1. Enhanced Ctrl+V in File Explorer
-SmartCtrlV detects clipboard content intelligently and performs smart actions:
+## 🌟 1. Enhanced Ctrl+V in File Explorer
+SmartCtrlV intelligently analyzes clipboard text and automatically performs the most appropriate action when you press Ctrl + V inside Windows Explorer.
 
-- Create files from clipboard text (one filename per line)
-- Write or append clipboard content to selected text files
-- Detect and execute shell-like commands in the current folder  
-- Fully safe: no destructive behavior without confirmation
+### 🔧 ① Create files from clipboard text
+Paste lines like:
 
-### 📋 2. Multi-Format Paste Menu (`Ctrl + Alt + V`)
-A quick popup menu near your cursor with multiple paste modes:
+todo.txt
+notes.md
+script.py
 
-- **Raw Paste** — normal paste  
-- **Plain Text Paste** — remove formatting  
-- **Markdown Cleanup** — clean headings, lists, quotes, fences  
-- **Structured Formatting** — auto-format JSON / XML / HTML / SQL  
-- **Remove Blank Lines**  
-- **Python Dedent** — auto-fix indentation  
+SmartCtrlV will create:
 
-Menu items are fully configurable.
+todo.txt
+notes.md
+script.py
+
+If a file already exists, it automatically creates:
+
+script (1).py
+script (2).py
+
+---
+
+### 🔧 ② Write or append text into selected files
+If you select a text file in Explorer (e.g., log.txt) and press Ctrl + V, SmartCtrlV asks:
+
+- Overwrite file
+- Append to file
+- Cancel
+
+Example clipboard:
+
+2025-02-10: System started.
+
+→ Will be appended/overwritten safely into log.txt.
+
+---
+
+### 🔧 ③ Execute shell-like commands in the folder
+If the clipboard looks like a command:
+
+pip install requests
+
+or:
+
+git init && git add .
+
+SmartCtrlV opens cmd inside the current folder and runs it.
+
+Useful for:
+
+- Running commands copied from StackOverflow
+- Quickly creating projects
+- Executing git/pip/npm commands in-place
+
+---
+
+### 🛡️ ④ Safe by design
+- No destructive actions happen without explicit confirmation  
+- Code blocks / AI output / long text will never be misinterpreted as commands  
+- Long or complex content is safely ignored to avoid accidental file spam  
+
+---
+
+## 📋 2. Multi-Format Paste Menu (Ctrl + Alt + V)
+Pressing Ctrl + Alt + V opens a floating menu near your cursor where you choose how to paste the clipboard content.
+
+### ✨ Available Paste Modes
+
+### ✔ Raw Paste — normal paste
+Pastes text exactly as-is.
+
+---
+
+### ✔ Plain Text Paste — remove formatting
+Useful when copying from web pages, Word, rich text, etc.
+
+Clipboard:
+
+**Hello** _World_ [Link]
+
+→ Becomes:
+
+Hello World Link
+
+---
+
+### ✔ Markdown Cleanup
+Automatically removes Markdown syntax but keeps readable content.
+
+## Title
+- item
+- item 2
+> quote
+
+→
+
+Title
+item
+item 2
+quote
+
+---
+
+### ✔ Structured Formatting (JSON / XML / HTML / SQL)
+If you paste:
+
+{"a":1,"b":2,"c":[3,4,5]}
+
+→ Becomes formatted pretty JSON.
+
+XML / HTML / SQL are also auto-formatted.
+
+---
+
+### ✔ Remove Blank Lines
+
+Input:
+
+(Line 1)
+
+(Line 2)
+
+(Line 3)
+
+→ Output:
+
+Line 1
+Line 2
+Line 3
+
+---
+
+### ✔ Python Dedent
+Fixes indentation for Python code:
+
+        def test():
+            print("hi")
+
+→
+
+def test():
+    print("hi")
+
+---
+
+### ✔ Fully Configurable
+Each menu item can be enabled/disabled in tray settings.
 
 ### ⚙️ 3. Customizable Hotkeys
 All major hotkeys are user-configurable through the tray menu:
@@ -122,6 +251,7 @@ Thanks to all open-source libraries that made this possible.
 ## 📜 License
 
 MIT License — free for personal and commercial use.
+
 
 
 
