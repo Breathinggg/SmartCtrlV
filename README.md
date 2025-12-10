@@ -110,23 +110,24 @@ Users may edit the file manually if desired.
 - keyboard / mouse  
 
 ### Build
-```bash
 pyinstaller smartctrlv_tray.spec
 
-🧪 Roadmap / Planned Features
+
+## 🧪 Roadmap / Planned Features
 
 UI theme customization
 Optional AI-powered paste helpers
 Plugin-based formatting system
 Cloud-sync settings (optional)
 
-❤️ Acknowledgements
+## ❤️ Acknowledgements
 
 SmartCtrlV is inspired by the idea that copy/paste should be smarter.
 Thanks to all open-source libraries that made this possible.
 
-📜 License
+## 📜 License
 
 MIT License — free for personal and commercial use.
+
 
 
