@@ -6,11 +6,15 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[('smartctrlv.ico', '.')],
-    hiddenimports=[],
+    hiddenimports=['pystray._win32'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=[],
+    excludes=[
+        'PySide6', 'PyQt5', 'PyQt6',
+        'matplotlib', 'scipy', 'pandas', 'numpy',
+        'PIL.ImageQt',  # 这个会拉 Qt
+    ],
     noarchive=False,
     optimize=0,
 )
