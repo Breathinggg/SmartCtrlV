@@ -1,0 +1,19 @@
+{
+  "actions": [
+    {
+      "type": "create_file",
+      "path": "a.txt",
+      "content": "hello"
+    },
+    {
+      "type": "write_file",
+      "path": "notes.md",
+      "mode": "append",    // or "overwrite"
+      "content": "追加进去的内容..."
+    },
+    {
+      "type": "run_command",
+      "command": "pip install requests && python main.py"
+    }
+  ]
+}
