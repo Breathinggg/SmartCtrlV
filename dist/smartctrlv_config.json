@@ -1,0 +1,57 @@
+{
+  "ui": {
+    "language": "auto"
+  },
+  "explorer": {
+    "enabled": true,
+    "enable_command_from_clipboard": true,
+    "enable_create_files_from_clipboard": true,
+    "enable_write_file_from_clipboard": true,
+    "text_ext_whitelist": [
+      ".txt",
+      ".md",
+      ".markdown",
+      ".log",
+      ".json",
+      ".yaml",
+      ".yml",
+      ".ini",
+      ".cfg",
+      ".py",
+      ".js",
+      ".ts",
+      ".java",
+      ".c",
+      ".cpp",
+      ".cs"
+    ]
+  },
+  "menu": {
+    "enabled": true,
+    "whitelist_enabled": true,
+    "whitelist_processes": [
+      "notepad.exe",
+      "chrome.exe",
+      "msedge.exe",
+      "firefox.exe",
+      "code.exe",
+      "winword.exe",
+      "excel.exe",
+      "powerpnt.exe",
+      "wechat.exe",
+      "qq.exe"
+    ],
+    "hotkey": "ctrl+alt+v",
+    "options": {
+      "raw": true,
+      "plain": true,
+      "markdown": true,
+      "structured": true,
+      "collapse_blank": true,
+      "python_dedent": true
+    }
+  },
+  "hotkeys": {
+    "explorer_ctrl_v": "ctrl+v"
+  }
+}
